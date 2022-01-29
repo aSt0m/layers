@@ -1,9 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .content{
-    background: rgb(252, 252, 252);
+    background: rgb(223, 195, 195);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 
@@ -17,15 +22,17 @@
 }
 
 
-.final__layers{
+.content-layers{
     /* border: 1px solid #000; */
     width: 15rem;
     height: 30rem;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
-.final__layers img {
+.img {
     position: absolute;
     max-width: 100%;
     height: 100%;
@@ -33,10 +40,11 @@
     right: 0;
     transition: all ease 2600ms;
     transform-style: preserve-3d;
+    color: #000;
    
   }
   
-  .final__layers:hover img {
+.img:hover {
     /*
     The "perspective" CSS function (or property) enables 3D space and produces the illustion of "distance" between the Z plane and the user.
   
@@ -47,43 +55,32 @@
     transform: perspective(2200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(180px);
   }
   
-  .final__layers img.back {
-    width: auto;
-    left: 20px;
-    /* border: 3px solid rgb(255, 12, 3); */
+.layers {
+  width: auto;
+  left: -10px;
+ 
     
   }
-  .final__layers img.mid {
-    width: auto;
-    left: 20px;
-    /* border: 2px solid rgb(89, 0, 255); */
-  }
-  
-  .final__layers img.top {
-    width: auto;
-    left: 20px;
-    /* border: 1px solid rgb(2, 250, 35); */
-    
-}
-.final__layers img.tippy {
+
+.tippy {
     width: 90%;
-    left: 30px;
+    left: 10px;
     top: -120px;
-    /* border: 3px solid rgb(47, 0, 255); */
+    
   }
   
-  .final__layers:hover img.back {
+  .content-layers:hover img.back {
     transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(10px);
   }
-  .final__layers:hover img.mid {
+  .content-layers:hover img.mid {
     transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(40px);
   }
   
-  .final__layers:hover img.top {
+  .content-layers:hover img.top {
     transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(60px);
   }
   
-  .final__layers:hover img.tippy {
+  .content-layers:hover img.tippy {
     transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(15px);
   }
   
